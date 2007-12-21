@@ -25,6 +25,7 @@ BuildRequires:  perl(IO::Socket::SSL)
 BuildRequires:  perl(FCGI)
 BuildRequires:  perl(Net::Jabber)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 SOAP::Lite for Perl is a collection of Perl modules which provides a simple and
