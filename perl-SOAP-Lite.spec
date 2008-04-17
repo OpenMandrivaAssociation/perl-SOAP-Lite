@@ -12,10 +12,6 @@ Summary:        Client and server side SOAP implementation
 Group:          Development/Perl
 Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/SOAP/%{module}-%{version}.tar.bz2
-Patch:          Lite.pm.patch
-%if %{mdkversion} < 1010
-BuildRequires:  perl-devel
-%endif
 BuildRequires:  perl(LWP::UserAgent)
 BuildRequires:  perl(XML::Parser) >= 2.23
 BuildRequires:  perl(MIME::Base64)
@@ -41,7 +37,6 @@ http://www.w3.org/TR/SOAP for details.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch
 
 find examples -type f | xargs perl -pi \
     -e 's|^#!perl -w|#!%{__perl} -w|;' \
