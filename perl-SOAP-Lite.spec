@@ -1,6 +1,6 @@
 %define module  SOAP-Lite
 %define name    perl-%{module}
-%define version 0.710.07
+%define version 0.710.08
 %define release %mkrel 1
 %define _requires_exceptions perl(MQSeries.*)\\|perl(MQClient.*)
 
