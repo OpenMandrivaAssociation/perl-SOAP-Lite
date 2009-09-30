@@ -1,28 +1,30 @@
-%define module  SOAP-Lite
-%define name    perl-%{module}
-%define version 0.710.08
-%define release %mkrel 4
+%define upstream_name    SOAP-Lite
+%define upstream_version 0.710.09
+
 %define _requires_exceptions perl(MQSeries.*)\\|perl(MQClient.*)
 %define _provides_exceptions perl(LWP::Protocol)
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-License:        GPL or Artistic
-Summary:        Client and server side SOAP implementation
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/SOAP/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Client and server side SOAP implementation
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/SOAP/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires:  perl(Crypt::SSLeay)
+BuildRequires:  perl(FCGI)
+BuildRequires:  perl(IO::Socket::SSL)
 BuildRequires:  perl(LWP::UserAgent)
-BuildRequires:  perl(XML::Parser) >= 2.23
 BuildRequires:  perl(MIME::Base64)
 BuildRequires:  perl(MIME::Parser)
-BuildRequires:  perl(Crypt::SSLeay)
-BuildRequires:  perl(IO::Socket::SSL)
-BuildRequires:  perl(FCGI)
 BuildRequires:  perl(Net::Jabber)
+BuildRequires:  perl(XML::Parser) >= 2.23
+
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 SOAP::Lite for Perl is a collection of Perl modules which provides a simple and
@@ -37,7 +39,7 @@ specification and has initial support for SOAP 1.2 specification.  See
 http://www.w3.org/TR/SOAP for details.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 find examples -type f | xargs perl -pi \
     -e 's|^#!perl -w|#!%{__perl} -w|;' \
@@ -69,6 +71,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/UDDI
 %{perl_vendorlib}/XML
 %{perl_vendorlib}/XMLRPC
-%{perl_vendorlib}/OldDocs
-
-
