@@ -1,5 +1,5 @@
 %define upstream_name    SOAP-Lite
-%define upstream_version 0.710.09
+%define upstream_version 0.710.10
 
 %define _requires_exceptions perl(MQSeries.*)\\|perl(MQClient.*)
 %define _provides_exceptions perl(LWP::Protocol)
