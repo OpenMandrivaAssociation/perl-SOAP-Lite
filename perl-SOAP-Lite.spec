@@ -14,14 +14,17 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/SOAP/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:  perl(Class::Inspector)
 BuildRequires:  perl(Crypt::SSLeay)
 BuildRequires:  perl(FCGI)
 BuildRequires:  perl(IO::Socket::SSL)
 BuildRequires:  perl(LWP::UserAgent)
 BuildRequires:  perl(MIME::Base64)
+BuildRequires:  perl(MIME::Lite)
 BuildRequires:  perl(MIME::Parser)
 BuildRequires:  perl(Net::Jabber)
-BuildRequires:  perl(XML::Parser) >= 2.23
+BuildRequires:  perl(Task::Weaken)
+BuildRequires:  perl(XML::Parser) >= 2.230.0
 
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
