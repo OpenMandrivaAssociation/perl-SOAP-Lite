@@ -6,7 +6,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    Client and server side SOAP implementation
 License:    GPL+ or Artistic
