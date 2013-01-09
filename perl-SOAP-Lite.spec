@@ -33,6 +33,7 @@ BuildRequires:	perl(HTTP::Daemon)
 BuildRequires:	perl(Net::Jabber)
 BuildRequires:	perl(Task::Weaken)
 BuildRequires:	perl(XML::Parser) >= 2.230.0
+BuildRequires:	perl-JSON-PP
 BuildRequires:	perl-devel
 
 BuildArch:	noarch
