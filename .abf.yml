@@ -1,2 +1,4 @@
+removed_sources:
+  SOAP-Lite-0.714.tar.gz: e7257cb41b4f6016d2fef6d07bdd0a04c3223fe3
 sources:
-  "SOAP-Lite-0.714.tar.gz": e7257cb41b4f6016d2fef6d07bdd0a04c3223fe3
+  SOAP-Lite-1.12.tar.gz: 4e4e9a9510ea68a261cfc56cfdda6b5b33f4e253

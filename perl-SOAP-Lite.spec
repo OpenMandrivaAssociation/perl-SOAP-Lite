@@ -1,5 +1,5 @@
 %define modname	SOAP-Lite
-%define modver	0.714
+%define modver 1.12
 
 # Looks like we need only Provides exceptions now?
 %if %{_use_internal_dependency_generator}
@@ -13,7 +13,7 @@
 Summary:	Client and server side SOAP implementation
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	12
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -57,7 +57,7 @@ find examples -type f | xargs perl -pi \
 find examples -type f -name *.bat | xargs rm -f 
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor --noprompt
+perl Makefile.PL INSTALLDIRS=vendor --noprompt
 %make
 
 %check
@@ -77,4 +77,3 @@ make test
 %{perl_vendorlib}/XMLRPC
 %{_mandir}/man1/*
 %{_mandir}/man3/*
-
