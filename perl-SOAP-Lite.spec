@@ -1,5 +1,5 @@
 %define modname	SOAP-Lite
-%define modver	0.714
+%define modver	1.13
 
 # Looks like we need only Provides exceptions now?
 %if %{_use_internal_dependency_generator}
@@ -18,7 +18,6 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/SOAP/%{modname}-%{modver}.tar.gz
-Patch0:		SOAP-Lite-0.714-fix-ftp-transport-version-r391.patch
 BuildArch:	noarch
 BuildRequires:	perl(Class::Inspector)
 BuildRequires:	perl(Crypt::SSLeay)
@@ -70,11 +69,7 @@ make test
 %doc Changes README examples
 %{_bindir}/*.pl
 %{perl_vendorlib}/Apache
-%{perl_vendorlib}/IO
 %{perl_vendorlib}/SOAP
-%{perl_vendorlib}/UDDI
-%{perl_vendorlib}/XML
-%{perl_vendorlib}/XMLRPC
 %{_mandir}/man1/*
 %{_mandir}/man3/*
 
