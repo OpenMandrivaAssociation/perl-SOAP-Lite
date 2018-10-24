@@ -1,5 +1,5 @@
 %define modname	SOAP-Lite
-%define modver	1.13
+%define modver	1.20
 
 # Looks like we need only Provides exceptions now?
 %if %{_use_internal_dependency_generator}
