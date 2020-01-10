@@ -48,7 +48,7 @@ http://www.w3.org/TR/SOAP for details.
 
 %prep
 %setup -qn %{modname}-%{modver}
-%apply_patches
+%autopatch -p1
 
 find examples -type f | xargs perl -pi \
     -e 's|^#!perl -w|#!%{__perl} -w|;' \
