@@ -19,6 +19,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/SOAP/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Class::Inspector)
 BuildRequires:	perl(Crypt::SSLeay)
 BuildRequires:	perl(FCGI)
