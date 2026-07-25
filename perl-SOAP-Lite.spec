@@ -1,5 +1,5 @@
 %define modname	SOAP-Lite
-%define modver	1.20
+%define modver	1.27
 
 # Looks like we need only Provides exceptions now?
 %if %{_use_internal_dependency_generator}
@@ -12,12 +12,12 @@
 
 Summary:	Client and server side SOAP implementation
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	14
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/SOAP/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/redhotpenguin/perl-soaplite
+Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHRED/SOAP-Lite-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Class::Inspector)
